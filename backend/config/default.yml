@@ -1,0 +1,18 @@
+ports:
+    http: 8081
+    debug: 5858
+
+auth:
+    jwt_secret: 'supersecret'
+
+mongo:
+    url: 'mongodb://database/testDB'
+    #url: 'mongodb://localhost:27017/testDB'
+
+facebook:
+    clientID: 'clientID'
+    clientSecret: 'clientSecret'
+    callbackURL: 'http://localhost:8081/auth/facebook/callback'
+
+# none/debug/info
+loglevel: info

@@ -1,0 +1,25 @@
+
+version: '2'
+
+services:
+  frontend:
+    build: frontend
+    environment:
+      NODE_ENV: production
+    command: npm run start:prod
+    ports:
+      - 8080:8080
+
+  backend:
+    build: backend
+    environment:
+      NODE_ENV: production
+    ports:
+      - 8081:8081
+    links:
+      - database
+
+  database:
+    image: mongo
+    ports:
+      - 27018:27017

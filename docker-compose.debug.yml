@@ -1,0 +1,27 @@
+
+version: '2'
+
+services:
+  frontend:
+    build: frontend
+    environment:
+      NODE_ENV: development
+    ports:
+      - 8080:8080
+
+  backend:
+    build: backend
+    environment:
+      NODE_ENV: development
+    ## set your startup file here
+    command: npm run start:debug
+    ports:
+      - 8081:8081
+      - 5858:5858
+    links:
+      - database
+
+  database:
+    image: mongo
+    ports:
+      - 27018:27017

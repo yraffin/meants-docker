@@ -1,0 +1,13 @@
+<div class="modal-header">
+  <h4 class="modal-title" [innerHTML]="titleCode|translate"></h4>
+  <button type="button" class="close" aria-label="Close" (click)="cancel()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+  {{descriptionCode|translate}}
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-lg btn-primary btn-block btn-save" (click)="confirm(true)">{{closeCode|translate}}</button >
+    <button type="button" class="btn btn-secondary" (click)="confirm(false)">{{cancelCode|translate}}</button>
+</div>
