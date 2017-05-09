@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { ErrorMiddlewareInterface, MiddlewareGlobalAfter, HttpError } from 'routing-controllers';
+import { ExpressErrorMiddlewareInterface, Middleware, HttpError } from 'routing-controllers';
 
 import { ApiErrorBase } from '../../errors';
 
@@ -7,8 +7,8 @@ import { ApiErrorBase } from '../../errors';
  * Represents the global app error handler middleware.
  * @class
  */
-@MiddlewareGlobalAfter()
-export class AppErrorHandlerMiddleware implements ErrorMiddlewareInterface {
+@Middleware({ type: 'after' })
+export class AppErrorHandlerMiddleware implements ExpressErrorMiddlewareInterface {
 
   /**
    * Called when an error occurred.

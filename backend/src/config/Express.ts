@@ -55,16 +55,14 @@ export class ExpressConfig {
 
     // gets specifical directories
     const controllerDirs = glob.sync(path.resolve('dist/**/*Controller.js'));
-    const middlewares = glob.sync(path.resolve('dist/**/*Middleware.js'));
-    const interceptors = glob.sync(path.resolve('dist/**/*Interceptor.js'));
+    const middlewaresDirs = glob.sync(path.resolve('dist/**/*Middleware.js'));
 
     useExpressServer(this.app, {
       routePrefix: '/api',
       defaultErrorHandler: false,
       enableValidation: true,
-      controllerDirs: controllerDirs,
-      middlewares: middlewares,
-      interceptors: interceptors
+      controllers: controllerDirs,
+      middlewares: middlewaresDirs
     });
   }
 }

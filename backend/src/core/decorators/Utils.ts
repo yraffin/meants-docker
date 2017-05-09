@@ -1,6 +1,6 @@
 export const METADATA_KEY = 'core:metadata';
 import * as _ from 'lodash';
-import { defaultMetadataArgsStorage } from 'routing-controllers';
+import { UseContainerOptions } from 'routing-controllers';
 import { MetadataBase } from './metadata/MetadataBase';
 import { UnprocessableEntityError } from '../../errors';
 

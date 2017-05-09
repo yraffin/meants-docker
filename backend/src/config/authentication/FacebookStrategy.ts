@@ -6,7 +6,7 @@ import { Container } from 'typedi';
 
 import { UserModel, UsersService } from '../../users/UsersService';
 
-let opts = {
+const opts = {
   // by default, local strategy uses username and password, we will override with email
   clientID: config.get('facebook.clientID'),
   clientSecret: config.get('facebook.clientSecret'),

@@ -1,4 +1,4 @@
-import * as http from "http";
+import * as http from 'http';
 import { ExpressConfig } from './Express';
 import { logger } from '../core/logging';
 import * as config from 'config';

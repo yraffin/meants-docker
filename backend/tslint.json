@@ -1,5 +1,4 @@
 {
-  "extends": "tslint:latest",
   "rulesDirectory": [
     "node_modules/codelyzer"
   ],
@@ -13,6 +12,7 @@
     "curly": true,
     "eofline": true,
     "forin": true,
+    "import-blacklist": [true, "rxjs"],
     "import-spacing": true,
     "indent": [
       true,
@@ -46,10 +46,7 @@
     "no-empty": false,
     "no-empty-interface": true,
     "no-eval": true,
-    "no-inferrable-types": [
-      true,
-      "ignore-params"
-    ],
+    "no-inferrable-types": [true, "ignore-params"],
     "no-shadowed-variable": true,
     "no-string-literal": false,
     "no-string-throw": true,
@@ -89,7 +86,6 @@
         "variable-declaration": "nospace"
       }
     ],
-    "jsdoc-format": true,
     "typeof-compare": true,
     "unified-signatures": true,
     "variable-name": false,
@@ -101,7 +97,21 @@
       "check-separator",
       "check-type"
     ],
-    "no-reference": false,
-    "no-var-requires": false
+
+    "directive-selector": [true, "attribute", "btc", "camelCase"],
+    "component-selector": [true, "element", "btc", "kebab-case"],
+    "pipe-naming": [true, "camelCase", "btc"],
+    "use-input-property-decorator": true,
+    "use-output-property-decorator": true,
+    "use-host-property-decorator": true,
+    "no-input-rename": true,
+    "no-output-rename": true,
+    "use-life-cycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "component-class-suffix": true,
+    "directive-class-suffix": true,
+    "no-access-missing-member": true,
+    "templates-use-public": true,
+    "invoke-injectable": true
   }
 }

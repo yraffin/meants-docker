@@ -1,7 +1,7 @@
 import * as express from 'express';
 import * as config from 'config';
 import * as passport from 'passport';
-import { Strategy, IVerifyOptions } from 'passport-local';
+import { Strategy, IVerifyOptions, IStrategyOptionsWithRequest } from 'passport-local';
 import { Container } from 'typedi';
 
 import { Helpers } from './Helpers';
@@ -12,7 +12,7 @@ const opts = {
   usernameField: 'email',
   passwordField: 'password',
   passReqToCallback: true // allows us to pass back the entire request to the callback
-};
+} as IStrategyOptionsWithRequest;
 
 async function verify(req: express.Request, email: string, password: string,
   done: (error: any, user?: any, options?: IVerifyOptions) => void) {

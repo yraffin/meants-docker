@@ -9,7 +9,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AuthHttp } from 'angular2-jwt';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr/toastr';
+import { ToastrModule } from 'ngx-toastr';
 
 import { SharedModule } from './app/shared/shared.module';
 import { AuthorizationService } from './app/authentication/authorization.service';

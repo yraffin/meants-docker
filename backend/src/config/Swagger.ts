@@ -17,7 +17,7 @@ export function setupSwagger(app: express.Express, callback?: Function) {
         app.use(middleware.swaggerMetadata());
         app.use(setupSwaggerSecurity(middleware));
         app.use(middleware.swaggerValidator({
-            validateResponse: true
+            validateResponse: false
         }));
 
         if (callback) {

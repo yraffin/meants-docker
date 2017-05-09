@@ -1,5 +1,4 @@
 {
-  "compileOnSave": true,
   "compilerOptions": {
     "target": "es6",
     "moduleResolution": "node",
@@ -20,21 +19,16 @@
     "allowSyntheticDefaultImports": true,
     "suppressExcessPropertyErrors": true,
     "suppressImplicitAnyIndexErrors": true,
-    "outDir": "./dist/",
-    "baseUrl": "./src/",
+    "outDir": "dist/",
+    "baseUrl": "src/",
     "listFiles": false,
-    "noEmitHelpers": true,
-    "typeRoots": [
-      // add path to @types
-      "./node_modules/@types",
-      "./node_modules/typedi/**",
-      "./node_modules/routing-controllers/**"
-    ]
+    "noEmitHelpers": true
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "compileOnSave": false
 }

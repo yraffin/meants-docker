@@ -21,9 +21,6 @@ export class LanguagesController {
   @Inject()
   languagesService: LanguagesService;
 
-  constructor() {
-  }
-
   /**
    * Gets the user list filter by search text.
    * @method

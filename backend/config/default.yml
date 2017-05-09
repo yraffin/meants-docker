@@ -7,7 +7,7 @@ auth:
 
 mongo:
     url: 'mongodb://database/testDB'
-    #url: 'mongodb://localhost:27017/testDB'
+    #url: 'mongodb://localhost:27018/testDB'
 
 facebook:
     clientID: 'clientID'
